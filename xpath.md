@@ -8,18 +8,18 @@ service = Service(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 
 driver.get("https://hyperskill.org/tracks")
-time.sleep(1)
+
 driver.find_element("xpath", "//ul/li").click()
-time.sleep(1)
+
 driver.get("https://hyperskill.org/tracks")
-time.sleep(2)
+
 driver.find_element("xpath", "(//a)[11]").click()
-time.sleep(2)
+
 driver.find_element("xpath", "(//a)[15]").click()
-time.sleep(2)
+
 driver.find_element("xpath", "(//div[@class='mb-4 filtered-item col-md-6 col-12'])[3]").click()
-time.sleep(2)
+
 driver.back()
-time.sleep(2)
+
 driver.find_element("xpath", "(//button[contains(text(), 'Sign in')])").click()
-time.sleep(2)
+
