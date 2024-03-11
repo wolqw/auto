@@ -26,3 +26,20 @@ driver.switch_to.alert
 alert.send_keys("Abracadabra")
 alert.accept()
 time.sleep(3)
+
+
+button_confirmButton = ("xpath", "//button[@id='confirmButton']")
+wait.until(EC.element_to_be_clickable(button_confirmButton)).click()
+alert = wait.until(EC.alert_is_present())
+driver.switch_to.alert
+print(alert.text)
+alert.dismiss()
+time.sleep(2)
+
+
+button = ("xpath", "//button[@id='alertButton']")
+wait.until(EC.element_to_be_clickable(button)).click()
+alert = wait.until(EC.alert_is_present())
+driver.switch_to.alert
+alert.accept()
+time.sleep(2)
